@@ -1,7 +1,6 @@
 package com.zx.machine;
 
 import com.zx.machine.demo.state.IState;
-import com.zx.machine.demo.table.DemoTable;
 
 import java.util.Map;
 import java.util.UUID;
@@ -11,8 +10,6 @@ import java.util.concurrent.ConcurrentHashMap;
 public class StateMachine<TState extends IState> {
 
     private final Map<Integer, TState> stateMap = new ConcurrentHashMap<>();
-
-    private DemoTable table = new DemoTable();
 
     private TState currentState;
 
